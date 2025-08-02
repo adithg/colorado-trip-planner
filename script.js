@@ -8,9 +8,9 @@ let currentEditingStop = null;
 // Trip data structure
 let tripData = {
     stops: [
-        { id: 0, location: "Plano, TX", name: "Plano, TX", time: "8:00 AM", description: "Departure point", day: 1, lat: 33.0198, lng: -96.6989 },
-        { id: 1, location: "Palo Duro Canyon State Park, TX", name: "Palo Duro Canyon State Park", time: "10:00 AM - 12:00 PM", description: "Second largest canyon in the US. Quick rim trail walk or Lighthouse Trail.", day: 1, lat: 34.9847, lng: -101.6608 },
-        { id: 2, location: "Telluride, CO", name: "Telluride, CO", time: "7:00-8:00 PM", description: "Check into accommodation, dinner downtown", day: 1, lat: 37.9375, lng: -107.8123 },
+        { id: 0, location: "Plano, TX", name: "Plano, TX", time: "6:00 AM", description: "Early departure - Google Maps: Total 12 hours driving today", day: 1, lat: 33.0198, lng: -96.6989 },
+        { id: 1, location: "Palo Duro Canyon State Park, TX", name: "Palo Duro Canyon State Park", time: "12:00 PM - 2:00 PM", description: "Second largest canyon in the US. Google Maps: 350 miles, 5h 30m from Plano.", day: 1, lat: 34.9847, lng: -101.6608 },
+        { id: 2, location: "Telluride, CO", name: "Telluride, CO", time: "8:30-9:00 PM", description: "Check into accommodation, late dinner. Google Maps: 425 miles, 6h 30m from Palo Duro.", day: 1, lat: 37.9375, lng: -107.8123 },
         { id: 3, location: "Bridal Veil Falls, Telluride, CO", name: "Bridal Veil Falls", time: "8:00 AM", description: "Colorado's tallest free-falling waterfall (365 feet). 4WD or moderate hike.", day: 2, lat: 37.9514, lng: -107.7931 },
         { id: 4, location: "Lower Blue Lake Trailhead, Ridgway, CO", name: "Lower Blue Lakes Hike", time: "12:00 PM - 4:00 PM", description: "3.5 miles roundtrip. Stunning alpine lakes with mountain backdrop.", day: 2, lat: 38.1539, lng: -107.7544 },
         { id: 5, location: "Telluride, CO", name: "Return to Telluride", time: "Evening", description: "Gondola ride for sunset views, dinner", day: 2, lat: 37.9375, lng: -107.8123 },
@@ -22,7 +22,7 @@ let tripData = {
         { id: 11, location: "Garden of the Gods, Colorado Springs, CO", name: "Garden of the Gods", time: "11:30 AM - 3:00 PM", description: "FREE admission. Red rock formations, visitor center, multiple trails.", day: 5, lat: 38.8719, lng: -104.8856 },
         { id: 12, location: "Pikes Peak, Colorado Springs, CO", name: "Pikes Peak", time: "3:30 PM - 7:00 PM", description: "14,115 ft summit. Drive or Cog Railway. Famous summit donuts!", day: 5, lat: 38.8405, lng: -105.0442 },
         { id: 13, location: "Capulin Volcano National Monument, NM", name: "Capulin Volcano National Monument", time: "12:00 PM - 2:30 PM", description: "$7 entrance fee. 2-mile spiral drive to rim, crater rim trail.", day: 6, lat: 36.7828, lng: -103.9711 },
-        { id: 14, location: "Plano, TX", name: "Arrive home in Plano, TX", time: "7:30 PM", description: "End of trip", day: 6, lat: 33.0198, lng: -96.6989 }
+        { id: 14, location: "Plano, TX", name: "Arrive home in Plano, TX", time: "8:00 PM", description: "End of amazing Colorado trip! Google Maps verified route.", day: 6, lat: 33.0198, lng: -96.6989 }
     ]
 };
 

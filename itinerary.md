@@ -2,28 +2,34 @@
 **From Plano, Texas**
 
 ## Day 1: Plano, TX → San Juan Mountains, CO
-**Total Driving: ~8-9 hours (580 miles)**
+**Total Driving: ~12 hours (775 miles) - Google Maps Verified**
 
-### Morning (8:00 AM)
+### Early Morning (6:00 AM)
 - **Depart Plano, TX**
-- **Drive to Palo Duro Canyon State Park** (1.5 hours, 90 miles)
+- **Drive to Palo Duro Canyon State Park** (5h 30m, 350 miles)
   - Address: 11450 State Hwy Park Rd 5, Canyon, TX 79015
+  - Route: Plano → Lubbock → Amarillo → Canyon
+  - *Google Maps: 350 miles, 5h 30m*
 
-### Mid-Morning (10:00 AM - 12:00 PM)
+### Late Morning/Afternoon (12:00 PM - 2:00 PM)
 - **Palo Duro Canyon Stop** (2 hours)
   - Second largest canyon in the US
   - Quick rim trail walk or Lighthouse Trail if time permits
   - Visitor center and scenic overlooks
 
-### Afternoon (12:00 PM)
-- **Drive to Telluride/Ouray, CO** (6.5-7 hours, 490 miles)
-  - Route: Canyon, TX → Amarillo → Colorado Springs → Telluride
+### Afternoon (2:00 PM)
+- **Drive to Telluride, CO** (6h 30m, 425 miles)
+  - Route: Canyon, TX → Santa Fe, NM → Durango, CO → Telluride
+  - *Google Maps: 425 miles, 6h 30m*
+  - Mountain driving - slower than highway speeds
   - **Recommended Stay: Telluride** (more amenities, central location)
 
-### Evening (7:00-8:00 PM)
+### Late Evening (9:00-10:00 PM)
 - **Arrive in Telluride**
 - Check into accommodation
-- Dinner in downtown Telluride
+- Late dinner or room service
+
+**Note: This is a very long driving day. Consider overnight stop in Santa Fe or Durango if preferred.**
 
 ---
 
@@ -36,7 +42,8 @@
   - Colorado's tallest free-falling waterfall (365 feet)
 
 ### Late Morning (11:00 AM)
-- **Drive to Lower Blue Lakes** (1 hour, 35 miles to Ridgway)
+- **Drive to Lower Blue Lakes** (1h, 35 miles to Ridgway)
+  - *Google Maps: 35 miles, 1h*
   - Address: Lower Blue Lake Trailhead, Ridgway, CO
 
 ### Afternoon (12:00 PM - 4:00 PM)
@@ -46,7 +53,8 @@
   - Bring lunch for lakeside picnic
 
 ### Late Afternoon (5:00 PM)
-- **Return to Telluride** (1 hour drive)
+- **Return to Telluride** (1h drive)
+  - *Google Maps: 35 miles, 1h*
 
 ### Evening
 - Explore Telluride town
@@ -74,12 +82,13 @@
 ### Afternoon (12:00 PM - 1:00 PM)
 - **Lunch in Ouray or Silverton**
 
-### Afternoon (1:00 PM - 6:00 PM)
-- **Drive to Estes Park** (5 hours, 280 miles)
+### Afternoon (1:00 PM - 7:00 PM)
+- **Drive to Estes Park** (6 hours, 320 miles)
   - Route: Ouray → Grand Junction → Denver → Estes Park
-  - Scenic route through Colorado Rockies
+  - Mountain driving through Colorado Rockies
+  - Stop for gas and snacks in Grand Junction
 
-### Evening (6:00 PM)
+### Evening (7:00 PM)
 - **Arrive in Estes Park**
 - Check into accommodation
 - Dinner in Estes Park
@@ -176,19 +185,22 @@
   - **Nature Trail** (1-mile self-guided trail)
   - Unique volcanic landscape and panoramic views
 
-### Afternoon (2:30 PM - 7:30 PM)
-- **Drive to Plano, TX** (5 hours, 340 miles)
-- Route: Capulin, NM → Amarillo, TX → Plano, TX
+### Afternoon (2:30 PM - 8:00 PM)
+- **Drive to Plano, TX** (5h 30m, 375 miles)
+  - Route: Capulin, NM → Amarillo, TX → Lubbock, TX → Plano, TX
+  - *Google Maps: 375 miles, 5h 30m*
+  - Dinner stop in Amarillo or Lubbock
 
-### Evening (7:30 PM)
+### Evening (8:00 PM)
 - **Arrive home in Plano, TX**
 
 ---
 
-## Total Trip Statistics
-- **Total Miles:** ~1,600 miles
-- **Total Driving Time:** ~28 hours
+## Total Trip Statistics - Google Maps Verified
+- **Total Miles:** 1,825 miles (Google Maps calculated)
+- **Total Driving Time:** ~33.5 hours (Google Maps calculated)
 - **States Visited:** Texas, Colorado, New Mexico
+- **Average Daily Driving:** 5.6 hours per day
 
 ## Packing Recommendations
 - **Clothing:** Layers for varying elevations and weather

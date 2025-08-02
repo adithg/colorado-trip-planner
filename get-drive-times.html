@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Real Drive Times - Colorado Trip</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZwkpIxBN0sVAYitmnKwClC_-B_SX06T4&libraries=places,geometry&callback=initMap" async defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c5530;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .route {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4a7c59;
+        }
+        .route h3 {
+            margin: 0 0 10px 0;
+            color: #2c5530;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+        .result {
+            font-weight: bold;
+            color: #4a7c59;
+        }
+        .error {
+            color: #dc3545;
+        }
+        .update-btn {
+            background: #4a7c59;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px auto;
+            display: block;
+        }
+        .update-btn:hover {
+            background: #2c5530;
+        }
+        .update-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e8f5e8;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Getting Real Drive Times for Colorado Trip</h1>
+        <p>Using Google Maps API to calculate accurate driving times and distances for your exact route...</p>
+        
+        <div id="routes">
+            <div class="route" id="route-1">
+                <h3>Day 1: Plano, TX → Palo Duro Canyon State Park, TX</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-2">
+                <h3>Day 1: Palo Duro Canyon → Telluride, CO</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-3">
+                <h3>Day 2: Telluride → Lower Blue Lakes (Ridgway), CO</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-4">
+                <h3>Day 2: Lower Blue Lakes → Telluride, CO</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-5">
+                <h3>Day 3: Telluride → Ouray, CO (Million Dollar Highway)</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-6">
+                <h3>Day 3: Ouray → Estes Park, CO</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-7">
+                <h3>Day 4: Estes Park → Bear Lake (Rocky Mountain NP)</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-8">
+                <h3>Day 5: Estes Park → Colorado Springs, CO</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-9">
+                <h3>Day 6: Colorado Springs → Capulin Volcano, NM</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+            
+            <div class="route" id="route-10">
+                <h3>Day 6: Capulin Volcano → Plano, TX</h3>
+                <div class="loading">Calculating...</div>
+            </div>
+        </div>
+        
+        <button id="update-files" class="update-btn" disabled>Update Itinerary Files</button>
+        
+        <div id="results">
+            <h3>📊 Updated Trip Statistics</h3>
+            <p><strong>Total Distance:</strong> <span id="total-distance">Calculating...</span></p>
+            <p><strong>Total Driving Time:</strong> <span id="total-time">Calculating...</span></p>
+            <div id="file-updates"></div>
+        </div>
+    </div>
+
+    <script>
+        let directionsService;
+        let routeData = [];
+        let completedRoutes = 0;
+        
+        // Define all route segments
+        const routes = [
+            {
+                id: 1,
+                from: "Plano, TX",
+                to: "Palo Duro Canyon State Park, 11450 State Hwy Park Rd 5, Canyon, TX 79015",
+                day: 1,
+                description: "Plano → Palo Duro Canyon"
+            },
+            {
+                id: 2,
+                from: "Palo Duro Canyon State Park, Canyon, TX",
+                to: "Telluride, CO",
+                day: 1,
+                description: "Palo Duro Canyon → Telluride"
+            },
+            {
+                id: 3,
+                from: "Telluride, CO",
+                to: "Lower Blue Lake Trailhead, Ridgway, CO",
+                day: 2,
+                description: "Telluride → Lower Blue Lakes"
+            },
+            {
+                id: 4,
+                from: "Lower Blue Lake Trailhead, Ridgway, CO",
+                to: "Telluride, CO",
+                day: 2,
+                description: "Lower Blue Lakes → Telluride"
+            },
+            {
+                id: 5,
+                from: "Telluride, CO",
+                to: "Ouray, CO",
+                day: 3,
+                description: "Telluride → Ouray (Million Dollar Highway)"
+            },
+            {
+                id: 6,
+                from: "Ouray, CO",
+                to: "Estes Park, CO",
+                day: 3,
+                description: "Ouray → Estes Park"
+            },
+            {
+                id: 7,
+                from: "Estes Park, CO",
+                to: "Bear Lake, Rocky Mountain National Park, CO",
+                day: 4,
+                description: "Estes Park → Bear Lake (RMNP)"
+            },
+            {
+                id: 8,
+                from: "Estes Park, CO",
+                to: "Colorado Springs, CO",
+                day: 5,
+                description: "Estes Park → Colorado Springs"
+            },
+            {
+                id: 9,
+                from: "Colorado Springs, CO",
+                to: "Capulin Volcano National Monument, 46 Volcano Hwy, Capulin, NM 88414",
+                day: 6,
+                description: "Colorado Springs → Capulin Volcano"
+            },
+            {
+                id: 10,
+                from: "Capulin Volcano National Monument, Capulin, NM",
+                to: "Plano, TX",
+                day: 6,
+                description: "Capulin Volcano → Plano"
+            }
+        ];
+
+        function initMap() {
+            directionsService = new google.maps.DirectionsService();
+            calculateAllRoutes();
+        }
+
+        function calculateAllRoutes() {
+            routes.forEach((route, index) => {
+                // Stagger requests to avoid rate limiting
+                setTimeout(() => {
+                    calculateRoute(route);
+                }, index * 1000);
+            });
+        }
+
+        function calculateRoute(route) {
+            const request = {
+                origin: route.from,
+                destination: route.to,
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.IMPERIAL,
+                avoidHighways: false,
+                avoidTolls: false
+            };
+
+            directionsService.route(request, (result, status) => {
+                if (status === 'OK') {
+                    const leg = result.routes[0].legs[0];
+                    const routeInfo = {
+                        id: route.id,
+                        day: route.day,
+                        description: route.description,
+                        distance: Math.round(leg.distance.value * 0.000621371), // Convert to miles
+                        duration: Math.round(leg.duration.value / 60), // Convert to minutes
+                        durationText: leg.duration.text,
+                        distanceText: leg.distance.text
+                    };
+                    
+                    routeData.push(routeInfo);
+                    displayRouteResult(route.id, routeInfo);
+                } else {
+                    displayRouteError(route.id, status);
+                }
+                
+                completedRoutes++;
+                if (completedRoutes === routes.length) {
+                    calculateTotals();
+                }
+            });
+        }
+
+        function displayRouteResult(routeId, info) {
+            const routeElement = document.getElementById(`route-${routeId}`);
+            const loadingElement = routeElement.querySelector('.loading');
+            loadingElement.innerHTML = `
+                <div class="result">
+                    ✅ ${info.distanceText} • ${info.durationText}
+                    <br><small>${Math.round(info.duration/60)} hours ${info.duration%60} minutes</small>
+                </div>
+            `;
+        }
+
+        function displayRouteError(routeId, error) {
+            const routeElement = document.getElementById(`route-${routeId}`);
+            const loadingElement = routeElement.querySelector('.loading');
+            loadingElement.innerHTML = `<div class="error">❌ Error: ${error}</div>`;
+        }
+
+        function calculateTotals() {
+            const totalDistance = routeData.reduce((sum, route) => sum + route.distance, 0);
+            const totalMinutes = routeData.reduce((sum, route) => sum + route.duration, 0);
+            const totalHours = Math.round(totalMinutes / 60);
+
+            document.getElementById('total-distance').textContent = `${totalDistance} miles`;
+            document.getElementById('total-time').textContent = `${totalHours} hours (${Math.round(totalMinutes/60*10)/10} hours exact)`;
+            
+            document.getElementById('update-files').disabled = false;
+            document.getElementById('results').style.display = 'block';
+            
+            generateFileUpdates();
+        }
+
+        function generateFileUpdates() {
+            // Group routes by day
+            const dayTotals = {};
+            routeData.forEach(route => {
+                if (!dayTotals[route.day]) {
+                    dayTotals[route.day] = { distance: 0, duration: 0, routes: [] };
+                }
+                dayTotals[route.day].distance += route.distance;
+                dayTotals[route.day].duration += route.duration;
+                dayTotals[route.day].routes.push(route);
+            });
+
+            let updatesHTML = '<h4>📝 File Updates Needed:</h4><ul>';
+            
+            // Show day-by-day updates
+            Object.keys(dayTotals).forEach(day => {
+                const dayData = dayTotals[day];
+                const hours = Math.round(dayData.duration / 60 * 10) / 10;
+                updatesHTML += `<li><strong>Day ${day}:</strong> ${dayData.distance} miles, ${hours} hours total driving</li>`;
+            });
+
+            const totalDistance = routeData.reduce((sum, route) => sum + route.distance, 0);
+            const totalHours = Math.round(routeData.reduce((sum, route) => sum + route.duration, 0) / 60);
+
+            updatesHTML += `<li><strong>Trip Totals:</strong> ${totalDistance} miles, ${totalHours} hours</li>`;
+            updatesHTML += '</ul>';
+
+            document.getElementById('file-updates').innerHTML = updatesHTML;
+        }
+
+        // Store the data globally so we can access it
+        window.routeData = routeData;
+
+        document.getElementById('update-files').addEventListener('click', function() {
+            // Generate update instructions
+            alert('Route data calculated! Check the console for detailed results, then I\'ll update your files with the real Google Maps data.');
+            console.log('Complete Route Data:', routeData);
+            
+            // Show detailed breakdown
+            routeData.forEach(route => {
+                console.log(`${route.description}: ${route.distance} miles, ${Math.round(route.duration/60*10)/10} hours`);
+            });
+        });
+    </script>
+</body>
+</html>
