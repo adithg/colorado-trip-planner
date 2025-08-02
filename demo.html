@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Trip Planner - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>6-Day Colorado Trip from Plano, Texas</h1>
+            <div class="trip-stats">
+                <span id="total-distance">Total Distance: 1,600+ miles</span>
+                <span id="total-time">Total Driving: ~28 hours</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="map-container">
+                <div id="map" style="display: flex; align-items: center; justify-content: center; height: 600px; background: #f8f9fa; color: #666; flex-direction: column; text-align: center; padding: 20px;">
+                    <h3>🗺️ Interactive Map Demo</h3>
+                    <p>This is a demo version without Google Maps integration.</p>
+                    <p>To enable the interactive map:</p>
+                    <ol style="text-align: left; margin: 20px 0; max-width: 400px;">
+                        <li>Get a Google Maps API key</li>
+                        <li>Open <code>index.html</code> instead of this demo</li>
+                        <li>Replace "YOUR_API_KEY" with your actual key</li>
+                    </ol>
+                    <p><strong>The itinerary below is fully functional!</strong></p>
+                </div>
+                <div class="map-controls">
+                    <button onclick="alert('Get a Google Maps API key to enable route optimization!')">Optimize Route</button>
+                    <button onclick="location.reload()">Reset Route</button>
+                    <button onclick="window.print()">Print Itinerary</button>
+                </div>
+            </div>
+
+            <div class="itinerary-panel">
+                <h2>Trip Itinerary</h2>
+                <div class="day-tabs">
+                    <button class="day-tab active" data-day="1">Day 1</button>
+                    <button class="day-tab" data-day="2">Day 2</button>
+                    <button class="day-tab" data-day="3">Day 3</button>
+                    <button class="day-tab" data-day="4">Day 4</button>
+                    <button class="day-tab" data-day="5">Day 5</button>
+                    <button class="day-tab" data-day="6">Day 6</button>
+                </div>
+
+                <div class="day-content">
+                    <div id="day-1" class="day-panel active">
+                        <h3>Day 1: Plano, TX → San Juan Mountains, CO</h3>
+                        <div class="route-info">
+                            <span class="distance">580 miles</span>
+                            <span class="duration">8-9 hours</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop" data-location="Plano, TX">
+                                <div class="stop-time">8:00 AM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Depart Plano, TX</strong>
+                                        <p>Start your Colorado adventure! Make sure vehicle is ready for mountain driving.</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="0">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop" data-location="Palo Duro Canyon State Park, TX">
+                                <div class="stop-time">10:00 AM - 12:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Palo Duro Canyon State Park</strong>
+                                        <p>Second largest canyon in the US. Quick rim trail walk or Lighthouse Trail if time permits. Don't miss the visitor center!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="1">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop" data-location="Telluride, CO">
+                                <div class="stop-time">7:00-8:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Arrive in Telluride</strong>
+                                        <p>Check into accommodation, dinner in downtown Telluride. Get a good night's rest for tomorrow's adventures!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="2">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-2" class="day-panel">
+                        <h3>Day 2: San Juan Mountains - Telluride Area</h3>
+                        <div class="route-info">
+                            <span class="distance">70 miles local</span>
+                            <span class="duration">2 hours driving</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop">
+                                <div class="stop-time">8:00 AM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Bridal Veil Falls</strong>
+                                        <p>Colorado's tallest free-falling waterfall (365 feet). 4WD recommended or moderate hike (3.5 miles roundtrip).</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="3">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">12:00 PM - 4:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Lower Blue Lakes Hike</strong>
+                                        <p>3.5 miles roundtrip moderate hike near Ridgway. Stunning alpine lakes with dramatic mountain backdrop. Perfect for a lakeside picnic!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="4">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">Evening</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Return to Telluride</strong>
+                                        <p>Explore Telluride town, gondola ride for sunset views (if open), dinner at local restaurant.</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="5">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-3" class="day-panel">
+                        <h3>Day 3: San Juan Mountains → Estes Park</h3>
+                        <div class="route-info">
+                            <span class="distance">280 miles</span>
+                            <span class="duration">4.5 hours</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop">
+                                <div class="stop-time">8:00 AM - 12:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Million Dollar Highway (US-550)</strong>
+                                        <p>One of America's most scenic drives through the San Juan Mountains. Spectacular mountain views and dramatic curves!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="6">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">12:00 PM - 1:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Ouray - "Switzerland of America"</strong>
+                                        <p>Lunch stop and optional hot springs visit. Beautiful Victorian-era town surrounded by towering peaks.</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="7">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">6:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Arrive in Estes Park</strong>
+                                        <p>Check into accommodation, dinner in Estes Park, early rest for big hiking day tomorrow.</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="8">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-4" class="day-panel">
+                        <h3>Day 4: Rocky Mountain National Park</h3>
+                        <div class="route-info">
+                            <span class="distance">60 miles local</span>
+                            <span class="duration">2 hours driving</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop">
+                                <div class="stop-time">8:00 AM - 12:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Emerald Lake Trail</strong>
+                                        <p>3.2 miles roundtrip moderate hike from Bear Lake. Passes Nymph Lake, Dream Lake, and Emerald Lake. Stunning alpine scenery!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="9">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">1:00 PM - 5:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Trail Ridge Road & Alpine Visitor Center</strong>
+                                        <p>Highest continuous paved road in US (12,183 ft peak). Alpine Visitor Center at 11,796 ft. Weather dependent - may be closed in winter!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="10">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-5" class="day-panel">
+                        <h3>Day 5: Estes Park → Colorado Springs</h3>
+                        <div class="route-info">
+                            <span class="distance">180 miles</span>
+                            <span class="duration">3 hours</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop">
+                                <div class="stop-time">11:30 AM - 3:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Garden of the Gods</strong>
+                                        <p>FREE admission! Incredible red rock formations. Visit the visitor center, walk Balanced Rock and Cathedral Spires trails.</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="11">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">3:30 PM - 7:00 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Pikes Peak</strong>
+                                        <p>14,115 ft summit! Drive the Pikes Peak Highway ($15) or take the Cog Railway. Don't miss the famous summit donuts!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="12">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-6" class="day-panel">
+                        <h3>Day 6: Colorado Springs → Plano, TX</h3>
+                        <div class="route-info">
+                            <span class="distance">580 miles</span>
+                            <span class="duration">8 hours</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop">
+                                <div class="stop-time">12:00 PM - 2:30 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Capulin Volcano National Monument</strong>
+                                        <p>$7 entrance fee. Drive the 2-mile spiral road to the rim, walk the Crater Rim Trail. Unique volcanic landscape!</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="13">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop">
+                                <div class="stop-time">7:30 PM</div>
+                                <div class="stop-details">
+                                    <div>
+                                        <strong>Arrive home in Plano, TX</strong>
+                                        <p>End of an amazing Colorado adventure! Time to plan your next trip! 🏔️</p>
+                                    </div>
+                                    <button class="edit-stop" data-stop="14">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-stop-section">
+                    <h3>Add New Stop</h3>
+                    <div class="add-stop-form">
+                        <input type="text" id="new-location" placeholder="Enter location">
+                        <input type="text" id="new-time" placeholder="Time (e.g., 2:00 PM)">
+                        <textarea id="new-description" placeholder="Description"></textarea>
+                        <select id="add-to-day">
+                            <option value="1">Day 1</option>
+                            <option value="2">Day 2</option>
+                            <option value="3">Day 3</option>
+                            <option value="4">Day 4</option>
+                            <option value="5">Day 5</option>
+                            <option value="6">Day 6</option>
+                        </select>
+                        <button id="add-stop-btn">Add Stop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Stop Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Edit Stop</h3>
+                <form id="edit-form">
+                    <label for="edit-location">Location:</label>
+                    <input type="text" id="edit-location" required>
+                    
+                    <label for="edit-time">Time:</label>
+                    <input type="text" id="edit-time" required>
+                    
+                    <label for="edit-description">Description:</label>
+                    <textarea id="edit-description"></textarea>
+                    
+                    <div class="form-buttons">
+                        <button type="submit">Save Changes</button>
+                        <button type="button" id="delete-stop">Delete Stop</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Trip Summary</h3>
+            <div class="summary-stats">
+                <div class="stat">
+                    <strong>Total Distance:</strong> <span>1,600+ miles</span>
+                </div>
+                <div class="stat">
+                    <strong>Total Driving Time:</strong> <span>~28 hours</span>
+                </div>
+                <div class="stat">
+                    <strong>States:</strong> Texas, Colorado, New Mexico
+                </div>
+                <div class="stat">
+                    <strong>Best Time:</strong> Late May - September
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simplified JavaScript for demo version
+        let currentEditingStop = null;
+
+        // Simple trip data for demo
+        let demoStops = [
+            { id: 0, name: "Plano, TX", time: "8:00 AM", description: "Start your Colorado adventure! Make sure vehicle is ready for mountain driving.", day: 1 },
+            { id: 1, name: "Palo Duro Canyon State Park", time: "10:00 AM - 12:00 PM", description: "Second largest canyon in the US. Quick rim trail walk or Lighthouse Trail if time permits. Don't miss the visitor center!", day: 1 },
+            // Add more stops as needed
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeEventListeners();
+        });
+
+        function initializeEventListeners() {
+            // Day tab switching
+            document.querySelectorAll('.day-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    switchDay(this.dataset.day);
+                });
+            });
+
+            // Edit stop buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('edit-stop')) {
+                    const stopId = parseInt(e.target.dataset.stop);
+                    openEditModal(stopId);
+                }
+            });
+
+            // Modal close
+            document.querySelector('.close').addEventListener('click', closeModal);
+            document.getElementById('edit-modal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+
+            // Edit form submission
+            document.getElementById('edit-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Changes saved! (This is demo mode - changes are not persistent)');
+                closeModal();
+            });
+
+            // Delete stop button
+            document.getElementById('delete-stop').addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this stop?')) {
+                    alert('Stop deleted! (This is demo mode - changes are not persistent)');
+                    closeModal();
+                }
+            });
+
+            // Add stop button
+            document.getElementById('add-stop-btn').addEventListener('click', function() {
+                const location = document.getElementById('new-location').value.trim();
+                if (location) {
+                    alert('Stop added! (This is demo mode - changes are not persistent)');
+                    // Clear form
+                    document.getElementById('new-location').value = '';
+                    document.getElementById('new-time').value = '';
+                    document.getElementById('new-description').value = '';
+                } else {
+                    alert('Please enter at least a location.');
+                }
+            });
+        }
+
+        function switchDay(day) {
+            // Update tab buttons
+            document.querySelectorAll('.day-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`[data-day="${day}"]`).classList.add('active');
+
+            // Update day panels
+            document.querySelectorAll('.day-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(`day-${day}`).classList.add('active');
+        }
+
+        function openEditModal(stopId) {
+            currentEditingStop = stopId;
+            const stopElement = document.querySelector(`[data-stop="${stopId}"]`).closest('.stop');
+            const name = stopElement.querySelector('strong').textContent;
+            const time = stopElement.querySelector('.stop-time').textContent;
+            const description = stopElement.querySelector('p').textContent;
+
+            document.getElementById('edit-location').value = name;
+            document.getElementById('edit-time').value = time;
+            document.getElementById('edit-description').value = description;
+            document.getElementById('edit-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('edit-modal').style.display = 'none';
+            currentEditingStop = null;
+        }
+    </script>
+</body>
+</html>

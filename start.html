@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Trip Planner - Get Started</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2c5530, #4a7c59);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2c5530;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .trip-preview {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .trip-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a7c59;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            border-color: #4a7c59;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(74, 124, 89, 0.2);
+        }
+
+        .option h3 {
+            color: #2c5530;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .option p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .option-button {
+            background: #4a7c59;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .option-button:hover {
+            background: #2c5530;
+        }
+
+        .demo .option-button {
+            background: #6c757d;
+        }
+
+        .demo .option-button:hover {
+            background: #5a6268;
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .features h4 {
+            color: #2c5530;
+            margin-bottom: 10px;
+        }
+
+        .features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .features li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .features li:before {
+            content: "✓";
+            color: #4a7c59;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #4a7c59 0%, #4a7c59 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏔️ Colorado Trip Planner</h1>
+        <p class="subtitle">Your 6-day adventure from Plano, Texas to the Colorado Rockies</p>
+
+        <div class="trip-preview">
+            <div class="trip-stats">
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Days</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1,600+</div>
+                    <div class="stat-label">Miles</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">States</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Stops</div>
+                </div>
+            </div>
+            <p><strong>Route:</strong> Plano → Palo Duro Canyon → Telluride → San Juan Mountains → Estes Park → Rocky Mountain National Park → Colorado Springs → Capulin Volcano → Home</p>
+        </div>
+
+        <div class="options">
+            <div class="option demo" onclick="window.open('demo.html', '_blank')">
+                <h3>🚀 Quick Demo</h3>
+                <p>Try the trip planner immediately without any setup. Perfect for getting a feel for the itinerary and features.</p>
+                <div class="features">
+                    <h4>What you get:</h4>
+                    <ul>
+                        <li>Complete 6-day itinerary</li>
+                        <li>Editable stops and timing</li>
+                        <li>Add custom destinations</li>
+                        <li>Print-friendly format</li>
+                        <li>Mobile responsive design</li>
+                    </ul>
+                </div>
+                <a href="demo.html" class="option-button">Start Demo</a>
+            </div>
+
+            <div class="option full" onclick="window.open('index.html', '_blank')">
+                <h3>🗺️ Full Interactive Version</h3>
+                <p>Complete experience with <span class="highlight">interactive maps</span>, route optimization, and real-time distance calculations.</p>
+                <div class="features">
+                    <h4>Additional features:</h4>
+                    <ul>
+                        <li>Interactive Google Maps</li>
+                        <li>Real-time route calculation</li>
+                        <li>Automatic distance updates</li>
+                        <li>Route optimization</li>
+                        <li>Turn-by-turn directions</li>
+                    </ul>
+                </div>
+                <a href="index.html" class="option-button">Open Full Version</a>
+                <p style="font-size: 0.8rem; margin-top: 10px; color: #888;">
+                    <em>Note: Requires Google Maps API key for full functionality</em>
+                </p>
+            </div>
+        </div>
+
+        <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h3 style="color: #2c5530; margin-bottom: 10px;">🎯 What's Included</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; text-align: left;">
+                <div>
+                    <strong>Day 1-2:</strong> San Juan Mountains<br>
+                    <small>Telluride, Blue Lakes, Bridal Veil Falls</small>
+                </div>
+                <div>
+                    <strong>Day 3-4:</strong> Rocky Mountain NP<br>
+                    <small>Estes Park, Trail Ridge Road, Emerald Lake</small>
+                </div>
+                <div>
+                    <strong>Day 5:</strong> Colorado Springs<br>
+                    <small>Garden of the Gods, Pikes Peak</small>
+                </div>
+                <div>
+                    <strong>Day 6:</strong> Return Journey<br>
+                    <small>Capulin Volcano, back to Texas</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Best Travel Time:</strong> Late May through September for optimal weather and road access</p>
+            <p><strong>Note:</strong> Trail Ridge Road may be closed November through late May due to snow</p>
+        </div>
+    </div>
+</body>
+</html>
