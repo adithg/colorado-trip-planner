@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorado Trip Planner</title>
+    <title>7-Day Colorado Trip Planner</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZwkpIxBN0sVAYitmnKwClC_-B_SX06T4&libraries=places,geometry&callback=initMap" async defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>6-Day Colorado Trip from Plano, Texas</h1>
+            <h1>7-Day Colorado Trip from Plano, Texas</h1>
             <div class="trip-stats">
-                <span id="total-distance">Total Distance: 1,825 miles</span>
-                <span id="total-time">Total Driving: ~33.5 hours</span>
+                <span id="total-distance">Total Distance: 1,540 miles</span>
+                <span id="total-time">Total Driving: ~26 hours</span>
             </div>
         </header>
 
@@ -36,18 +36,19 @@
                     <button class="day-tab" data-day="4">Day 4</button>
                     <button class="day-tab" data-day="5">Day 5</button>
                     <button class="day-tab" data-day="6">Day 6</button>
+                    <button class="day-tab" data-day="7">Day 7</button>
                 </div>
 
                 <div class="day-content">
                     <div id="day-1" class="day-panel active">
-                        <h3>Day 1: Plano, TX → San Juan Mountains, CO</h3>
+                        <h3>Day 1: Plano, TX → Colorado Springs, CO</h3>
                         <div class="route-info">
-                            <span class="distance">775 miles</span>
-                            <span class="duration">12 hours</span>
+                            <span class="distance">580 miles</span>
+                            <span class="duration">8 hours</span>
                         </div>
                         <div class="stops">
                             <div class="stop" data-location="Plano, TX">
-                                <div class="stop-time">8:00 AM</div>
+                                <div class="stop-time">6:00 AM</div>
                                 <div class="stop-details">
                                     <strong>Depart Plano, TX</strong>
                                     <button class="edit-stop" data-stop="0">Edit</button>
@@ -61,11 +62,11 @@
                                     <button class="edit-stop" data-stop="1">Edit</button>
                                 </div>
                             </div>
-                            <div class="stop" data-location="Telluride, CO">
-                                <div class="stop-time">8:30-9:00 PM</div>
+                            <div class="stop" data-location="Colorado Springs, CO">
+                                <div class="stop-time">6:30-7:00 PM</div>
                                 <div class="stop-details">
-                                    <strong>Arrive in Telluride</strong>
-                                    <p>Check into accommodation, late dinner. Google Maps: 425 miles, 6h 30m from Palo Duro.</p>
+                                    <strong>Arrive in Colorado Springs</strong>
+                                    <p>Check into accommodation, dinner. Google Maps: 280 miles, 4h 30m from Palo Duro.</p>
                                     <button class="edit-stop" data-stop="2">Edit</button>
                                 </div>
                             </div>
@@ -73,33 +74,33 @@
                     </div>
 
                     <div id="day-2" class="day-panel">
-                        <h3>Day 2: San Juan Mountains - Telluride Area</h3>
+                        <h3>Day 2: Colorado Springs Activities</h3>
                         <div class="route-info">
-                            <span class="distance">70 miles local</span>
-                            <span class="duration">2 hours driving</span>
+                            <span class="distance">50 miles local</span>
+                            <span class="duration">1 hour driving</span>
                         </div>
                         <div class="stops">
-                            <div class="stop" data-location="Bridal Veil Falls, Telluride, CO">
-                                <div class="stop-time">8:00 AM</div>
+                            <div class="stop" data-location="Garden of the Gods, Colorado Springs, CO">
+                                <div class="stop-time">8:00 AM - 12:00 PM</div>
                                 <div class="stop-details">
-                                    <strong>Bridal Veil Falls</strong>
-                                    <p>Colorado's tallest free-falling waterfall (365 feet). 4WD or moderate hike.</p>
+                                    <strong>Garden of the Gods</strong>
+                                    <p>FREE admission. Red rock formations, visitor center, multiple trails.</p>
                                     <button class="edit-stop" data-stop="3">Edit</button>
                                 </div>
                             </div>
-                            <div class="stop" data-location="Lower Blue Lake Trailhead, Ridgway, CO">
-                                <div class="stop-time">12:00 PM - 4:00 PM</div>
+                            <div class="stop" data-location="Pikes Peak, Colorado Springs, CO">
+                                <div class="stop-time">12:30 PM - 6:00 PM</div>
                                 <div class="stop-details">
-                                    <strong>Lower Blue Lakes Hike</strong>
-                                    <p>3.5 miles roundtrip. Stunning alpine lakes with mountain backdrop.</p>
+                                    <strong>Pikes Peak</strong>
+                                    <p>14,115 ft summit. Drive or Cog Railway. Famous summit donuts!</p>
                                     <button class="edit-stop" data-stop="4">Edit</button>
                                 </div>
                             </div>
-                            <div class="stop" data-location="Telluride, CO">
-                                <div class="stop-time">Evening</div>
+                            <div class="stop" data-location="Colorado Springs, CO">
+                                <div class="stop-time">6:30 PM</div>
                                 <div class="stop-details">
-                                    <strong>Return to Telluride</strong>
-                                    <p>Gondola ride for sunset views, dinner</p>
+                                    <strong>Dinner in Colorado Springs</strong>
+                                    <p>Pack for Breckenridge tomorrow</p>
                                     <button class="edit-stop" data-stop="5">Edit</button>
                                 </div>
                             </div>
@@ -107,33 +108,33 @@
                     </div>
 
                     <div id="day-3" class="day-panel">
-                        <h3>Day 3: San Juan Mountains → Estes Park</h3>
+                        <h3>Day 3: Colorado Springs → Breckenridge</h3>
                         <div class="route-info">
-                            <span class="distance">375 miles</span>
-                            <span class="duration">7.5 hours</span>
+                            <span class="distance">100 miles</span>
+                            <span class="duration">2 hours</span>
                         </div>
                         <div class="stops">
-                            <div class="stop" data-location="Million Dollar Highway, CO">
-                                <div class="stop-time">8:00 AM - 12:00 PM</div>
+                            <div class="stop" data-location="Colorado Springs, CO">
+                                <div class="stop-time">8:00 AM</div>
                                 <div class="stop-details">
-                                    <strong>Million Dollar Highway (US-550)</strong>
-                                    <p>One of America's most scenic drives. Stop in Ouray.</p>
+                                    <strong>Depart Colorado Springs</strong>
+                                    <p>Scenic drive through South Park</p>
                                     <button class="edit-stop" data-stop="6">Edit</button>
                                 </div>
                             </div>
-                            <div class="stop" data-location="Ouray, CO">
-                                <div class="stop-time">12:00 PM - 1:00 PM</div>
+                            <div class="stop" data-location="Breckenridge, CO">
+                                <div class="stop-time">10:00 AM</div>
                                 <div class="stop-details">
-                                    <strong>Ouray - "Switzerland of America"</strong>
-                                    <p>Lunch and optional hot springs visit</p>
+                                    <strong>Arrive in Breckenridge</strong>
+                                    <p>Check in, explore Main Street, acclimatization</p>
                                     <button class="edit-stop" data-stop="7">Edit</button>
                                 </div>
                             </div>
-                            <div class="stop" data-location="Estes Park, CO">
-                                <div class="stop-time">6:30 PM</div>
+                            <div class="stop" data-location="Breckenridge Riverwalk, CO">
+                                <div class="stop-time">1:00 PM - 5:00 PM</div>
                                 <div class="stop-details">
-                                    <strong>Arrive in Estes Park</strong>
-                                    <p>Check in, dinner, early rest. Google Maps: 325 miles, 6h from Ouray.</p>
+                                    <strong>Acclimatization Activities</strong>
+                                    <p>Riverwalk Center, Carter Park, Main Street shopping</p>
                                     <button class="edit-stop" data-stop="8">Edit</button>
                                 </div>
                             </div>
@@ -141,10 +142,78 @@
                     </div>
 
                     <div id="day-4" class="day-panel">
-                        <h3>Day 4: Rocky Mountain National Park</h3>
+                        <h3>Day 4: Mount Quandary Hike (14,265 ft)</h3>
                         <div class="route-info">
-                            <span class="distance">60 miles local</span>
-                            <span class="duration">2 hours driving</span>
+                            <span class="distance">26 miles total</span>
+                            <span class="duration">1 hour driving</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop" data-location="Breckenridge, CO">
+                                <div class="stop-time">6:00 AM</div>
+                                <div class="stop-details">
+                                    <strong>Early Preparation</strong>
+                                    <p>Breakfast, pack water, snacks, layers, rain gear</p>
+                                    <button class="edit-stop" data-stop="9">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop" data-location="Mount Quandary Trailhead, Breckenridge, CO">
+                                <div class="stop-time">7:30 AM - 4:00 PM</div>
+                                <div class="stop-details">
+                                    <strong>Mount Quandary Fourteener Hike</strong>
+                                    <p>6.75 miles roundtrip, 3,365 ft elevation gain. One of Colorado's easier 14ers!</p>
+                                    <button class="edit-stop" data-stop="10">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop" data-location="Breckenridge, CO">
+                                <div class="stop-time">Evening</div>
+                                <div class="stop-details">
+                                    <strong>Celebration Dinner</strong>
+                                    <p>Rest and recovery after conquering your first fourteener!</p>
+                                    <button class="edit-stop" data-stop="11">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-5" class="day-panel">
+                        <h3>Day 5: Breckenridge → Kayaking → Estes Park</h3>
+                        <div class="route-info">
+                            <span class="distance">195 miles</span>
+                            <span class="duration">4 hours driving</span>
+                        </div>
+                        <div class="stops">
+                            <div class="stop" data-location="Breckenridge, CO">
+                                <div class="stop-time">8:00 AM</div>
+                                <div class="stop-details">
+                                    <strong>Depart Breckenridge</strong>
+                                    <p>Drive to Arkansas River for kayaking adventure</p>
+                                    <button class="edit-stop" data-stop="12">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop" data-location="Arkansas River, Buena Vista, CO">
+                                <div class="stop-time">10:00 AM - 3:00 PM</div>
+                                <div class="stop-details">
+                                    <strong>Whitewater Kayaking/Rafting</strong>
+                                    <p>Class II-III rapids, guided trip with lunch included</p>
+                                    <button class="edit-stop" data-stop="13">Edit</button>
+                                </div>
+                            </div>
+                            <div class="stop" data-location="Estes Park, CO">
+                                <div class="stop-time">6:00 PM</div>
+                                <div class="stop-details">
+                                    <strong>Arrive in Estes Park</strong>
+                                    <p>Check in, dinner, early rest for Rocky Mountain National Park</p>
+                                    <button class="edit-stop" data-stop="14">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="day-6" class="day-panel">
+                        <h3>Day 6: Rocky Mountain National Park</h3>
+                        <div class="route-info">
+                            <span class="distance">30 miles local</span>
+                            <span class="duration">1 hour driving</span>
                         </div>
                         <div class="stops">
                             <div class="stop" data-location="Bear Lake, Rocky Mountain National Park, CO">
@@ -152,7 +221,7 @@
                                 <div class="stop-details">
                                     <strong>Emerald Lake Trail</strong>
                                     <p>3.2 miles roundtrip. Passes Nymph, Dream, and Emerald Lakes.</p>
-                                    <button class="edit-stop" data-stop="9">Edit</button>
+                                    <button class="edit-stop" data-stop="15">Edit</button>
                                 </div>
                             </div>
                             <div class="stop" data-location="Trail Ridge Road, Rocky Mountain National Park, CO">
@@ -160,58 +229,41 @@
                                 <div class="stop-details">
                                     <strong>Trail Ridge Road & Alpine Visitor Center</strong>
                                     <p>Highest paved road in US (12,183 ft). Multiple scenic stops.</p>
-                                    <button class="edit-stop" data-stop="10">Edit</button>
+                                    <button class="edit-stop" data-stop="16">Edit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="day-5" class="day-panel">
-                        <h3>Day 5: Estes Park → Colorado Springs</h3>
+                    <div id="day-7" class="day-panel">
+                        <h3>Day 7: Estes Park → Plano, TX</h3>
                         <div class="route-info">
-                            <span class="distance">180 miles</span>
-                            <span class="duration">3 hours</span>
+                            <span class="distance">615 miles</span>
+                            <span class="duration">9.5 hours</span>
                         </div>
                         <div class="stops">
-                            <div class="stop" data-location="Garden of the Gods, Colorado Springs, CO">
-                                <div class="stop-time">11:30 AM - 3:00 PM</div>
+                            <div class="stop" data-location="Estes Park, CO">
+                                <div class="stop-time">8:00 AM</div>
                                 <div class="stop-details">
-                                    <strong>Garden of the Gods</strong>
-                                    <p>FREE admission. Red rock formations, visitor center, multiple trails.</p>
-                                    <button class="edit-stop" data-stop="11">Edit</button>
+                                    <strong>Depart Estes Park</strong>
+                                    <p>Drive to Capulin Volcano National Monument</p>
+                                    <button class="edit-stop" data-stop="17">Edit</button>
                                 </div>
                             </div>
-                            <div class="stop" data-location="Pikes Peak, Colorado Springs, CO">
-                                <div class="stop-time">3:30 PM - 7:00 PM</div>
-                                <div class="stop-details">
-                                    <strong>Pikes Peak</strong>
-                                    <p>14,115 ft summit. Drive or Cog Railway. Famous summit donuts!</p>
-                                    <button class="edit-stop" data-stop="12">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="day-6" class="day-panel">
-                        <h3>Day 6: Colorado Springs → Plano, TX</h3>
-                        <div class="route-info">
-                            <span class="distance">580 miles</span>
-                            <span class="duration">8 hours</span>
-                        </div>
-                        <div class="stops">
                             <div class="stop" data-location="Capulin Volcano National Monument, NM">
                                 <div class="stop-time">12:00 PM - 2:30 PM</div>
                                 <div class="stop-details">
                                     <strong>Capulin Volcano National Monument</strong>
                                     <p>$7 entrance fee. 2-mile spiral drive to rim, crater rim trail.</p>
-                                    <button class="edit-stop" data-stop="13">Edit</button>
+                                    <button class="edit-stop" data-stop="18">Edit</button>
                                 </div>
                             </div>
                             <div class="stop" data-location="Plano, TX">
-                                <div class="stop-time">7:30 PM</div>
+                                <div class="stop-time">8:00 PM</div>
                                 <div class="stop-details">
                                     <strong>Arrive home in Plano, TX</strong>
-                                    <button class="edit-stop" data-stop="14">Edit</button>
+                                    <p>End of amazing 7-day Colorado adventure!</p>
+                                    <button class="edit-stop" data-stop="19">Edit</button>
                                 </div>
                             </div>
                         </div>
@@ -231,6 +283,7 @@
                             <option value="4">Day 4</option>
                             <option value="5">Day 5</option>
                             <option value="6">Day 6</option>
+                            <option value="7">Day 7</option>
                         </select>
                         <button id="add-stop-btn">Add Stop</button>
                     </div>
@@ -265,10 +318,13 @@
             <h3>Trip Summary</h3>
             <div class="summary-stats">
                 <div class="stat">
-                    <strong>Total Distance:</strong> <span id="summary-distance">1,825 miles</span>
+                    <strong>Total Distance:</strong> <span id="summary-distance">1,540 miles</span>
                 </div>
                 <div class="stat">
-                    <strong>Total Driving Time:</strong> <span id="summary-time">33.5 hours</span>
+                    <strong>Total Driving Time:</strong> <span id="summary-time">26 hours</span>
+                </div>
+                <div class="stat">
+                    <strong>Peak Summited:</strong> Mount Quandary (14,265 ft)
                 </div>
                 <div class="stat">
                     <strong>States:</strong> Texas, Colorado, New Mexico
