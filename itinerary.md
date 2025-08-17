@@ -1,4 +1,4 @@
-# 7-Day Colorado Trip Itinerary
+# 6-Day Colorado Trip Itinerary
 **From Plano, Texas**
 
 ## Day 1: Plano, TX → Colorado Springs, CO
@@ -31,21 +31,11 @@
 
 ---
 
-## Day 2: Colorado Springs Activities
-**Base: Colorado Springs**
+## Day 2: Colorado Springs Activities → Breckenridge
+**Base: Colorado Springs → Breckenridge**
 
-### Morning (8:00 AM - 12:00 PM)
-- **Garden of the Gods** (4 hours)
-  - Address: 1805 N 30th St, Colorado Springs, CO 80904
-  - FREE admission
-  - **Visitor Center** (45 minutes)
-  - **Balanced Rock** (easy walk)
-  - **Cathedral Spires Trail** (moderate, 1.5 miles)
-  - **Perkins Central Garden Trail** (easy paved trail, 1.5 miles)
-  - Incredible red rock formations
-
-### Afternoon (12:30 PM - 6:00 PM)
-- **Pikes Peak** (5.5 hours total)
+### Morning (7:00 AM - 12:00 PM)
+- **Pikes Peak** (5 hours total)
   - **Option 1: Drive** (Pikes Peak Highway, $15 per adult)
     - 19-mile scenic drive to summit (14,115 ft)
     - 2.5 hours roundtrip driving + time at summit
@@ -57,43 +47,31 @@
     - Famous summit donuts
     - Panoramic views (weather permitting)
 
-### Evening (6:30 PM)
-- **Dinner in Colorado Springs**
-- Pack for Breckenridge
+### Afternoon (12:30 PM - 4:00 PM)
+- **Garden of the Gods** (3.5 hours)
+  - Address: 1805 N 30th St, Colorado Springs, CO 80904
+  - FREE admission
+  - **Visitor Center** (45 minutes)
+  - **Balanced Rock** (easy walk)
+  - **Cathedral Spires Trail** (moderate, 1.5 miles)
+  - **Perkins Central Garden Trail** (easy paved trail, 1.5 miles)
+  - Incredible red rock formations
 
----
-
-## Day 3: Colorado Springs → Breckenridge
-**Driving: ~2 hours (100 miles)**
-
-### Morning (8:00 AM)
-- **Depart Colorado Springs**
+### Late Afternoon (4:30 PM)
 - **Drive to Breckenridge** (2 hours, 100 miles)
   - Route: Colorado Springs → US-285 N → I-70 W → Breckenridge
   - *Google Maps: 100 miles, 2 hours*
   - Scenic mountain drive through South Park
 
-### Late Morning (10:00 AM)
+### Evening (6:30 PM)
 - **Arrive in Breckenridge**
 - Check into accommodation
-- Explore Breckenridge Main Street
-- **Lunch in Breckenridge**
-
-### Afternoon (1:00 PM - 5:00 PM)
-- **Acclimatization Activities** (4 hours)
-  - **Breckenridge Riverwalk Center** (easy walk along Blue River)
-  - **Carter Park** (short hike with town views)
-  - **Main Street shopping and galleries**
-  - Rest and hydrate for tomorrow's big hike
-
-### Evening
 - **Dinner in Breckenridge**
 - Early rest for Mount Quandary hike
-- Check weather conditions for tomorrow
 
 ---
 
-## Day 4: Mount Quandary Hike
+## Day 3: Mount Quandary Hike
 **Base: Breckenridge**
 
 ### Early Morning (6:00 AM)
@@ -132,7 +110,7 @@
 
 ---
 
-## Day 5: Breckenridge → Kayaking → Estes Park
+## Day 4: Breckenridge → Kayaking → Estes Park
 **Driving: ~3 hours total (180 miles)**
 
 ### Morning (8:00 AM)
@@ -166,7 +144,7 @@
 
 ---
 
-## Day 6: Rocky Mountain National Park
+## Day 5: Rocky Mountain National Park
 **Base: Estes Park**
 
 ### Early Morning (7:00 AM)
@@ -203,7 +181,7 @@
 
 ---
 
-## Day 7: Estes Park → Plano, TX
+## Day 6: Estes Park → Plano, TX
 **Total Driving: ~8 hours (580 miles)**
 
 ### Morning (8:00 AM)
@@ -242,12 +220,11 @@
 
 ### Daily Breakdown:
 - **Day 1:** Plano, TX → Colorado Springs, CO (8 hours, 580 miles)
-- **Day 2:** Colorado Springs activities (no driving)
-- **Day 3:** Colorado Springs → Breckenridge (2 hours, 100 miles)
-- **Day 4:** Mount Quandary hike (1 hour total, 26 miles)
-- **Day 5:** Breckenridge → Kayaking → Estes Park (4 hours, 195 miles)
-- **Day 6:** Rocky Mountain National Park activities (1 hour, 30 miles)
-- **Day 7:** Estes Park → Plano, TX (9.5 hours, 615 miles)
+- **Day 2:** Pikes Peak → Garden of the Gods → Breckenridge (4 hours, 100 miles)
+- **Day 3:** Mount Quandary hike (1 hour total, 26 miles)
+- **Day 4:** Breckenridge → Kayaking → Estes Park (4 hours, 195 miles)
+- **Day 5:** Rocky Mountain National Park activities (1 hour, 30 miles)
+- **Day 6:** Estes Park → Plano, TX (9.5 hours, 615 miles)
 
 ## Packing Recommendations
 - **Clothing:** Layers for varying elevations and weather (especially for 14er)

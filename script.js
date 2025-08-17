@@ -11,23 +11,20 @@ let tripData = {
         { id: 0, location: "Plano, TX", name: "Depart Plano, TX", time: "6:00 AM", description: "Early departure - Google Maps: Total 8 hours driving today", day: 1, lat: 33.0198, lng: -96.6989 },
         { id: 1, location: "Palo Duro Canyon State Park, TX", name: "Palo Duro Canyon State Park", time: "12:00 PM - 2:00 PM", description: "Second largest canyon in the US. Google Maps: 350 miles, 5h 30m from Plano.", day: 1, lat: 34.9847, lng: -101.6608 },
         { id: 2, location: "Colorado Springs, CO", name: "Arrive in Colorado Springs", time: "6:30-7:00 PM", description: "Check into accommodation, dinner. Google Maps: 280 miles, 4h 30m from Palo Duro.", day: 1, lat: 38.8339, lng: -104.8214 },
-        { id: 3, location: "Garden of the Gods, Colorado Springs, CO", name: "Garden of the Gods", time: "8:00 AM - 12:00 PM", description: "FREE admission. Red rock formations, visitor center, multiple trails.", day: 2, lat: 38.8719, lng: -104.8856 },
-        { id: 4, location: "Pikes Peak, Colorado Springs, CO", name: "Pikes Peak", time: "12:30 PM - 6:00 PM", description: "14,115 ft summit. Drive or Cog Railway. Famous summit donuts!", day: 2, lat: 38.8405, lng: -105.0442 },
-        { id: 5, location: "Colorado Springs, CO", name: "Dinner in Colorado Springs", time: "6:30 PM", description: "Pack for Breckenridge tomorrow", day: 2, lat: 38.8339, lng: -104.8214 },
-        { id: 6, location: "Colorado Springs, CO", name: "Depart Colorado Springs", time: "8:00 AM", description: "Scenic drive through South Park", day: 3, lat: 38.8339, lng: -104.8214 },
-        { id: 7, location: "Breckenridge, CO", name: "Arrive in Breckenridge", time: "10:00 AM", description: "Check in, explore Main Street, acclimatization", day: 3, lat: 39.4817, lng: -106.0384 },
-        { id: 8, location: "Breckenridge Riverwalk, CO", name: "Acclimatization Activities", time: "1:00 PM - 5:00 PM", description: "Riverwalk Center, Carter Park, Main Street shopping", day: 3, lat: 39.4817, lng: -106.0384 },
-        { id: 9, location: "Breckenridge, CO", name: "Early Preparation", time: "6:00 AM", description: "Breakfast, pack water, snacks, layers, rain gear", day: 4, lat: 39.4817, lng: -106.0384 },
-        { id: 10, location: "Mount Quandary Trailhead, Breckenridge, CO", name: "Mount Quandary Fourteener Hike", time: "7:30 AM - 4:00 PM", description: "6.75 miles roundtrip, 3,365 ft elevation gain. One of Colorado's easier 14ers!", day: 4, lat: 39.3975, lng: -106.1064 },
-        { id: 11, location: "Breckenridge, CO", name: "Celebration Dinner", time: "Evening", description: "Rest and recovery after conquering your first fourteener!", day: 4, lat: 39.4817, lng: -106.0384 },
-        { id: 12, location: "Breckenridge, CO", name: "Depart Breckenridge", time: "8:00 AM", description: "Drive to Arkansas River for kayaking adventure", day: 5, lat: 39.4817, lng: -106.0384 },
-        { id: 13, location: "Arkansas River, Buena Vista, CO", name: "Whitewater Kayaking/Rafting", time: "10:00 AM - 3:00 PM", description: "Class II-III rapids, guided trip with lunch included", day: 5, lat: 38.8422, lng: -106.1311 },
-        { id: 14, location: "Estes Park, CO", name: "Arrive in Estes Park", time: "6:00 PM", description: "Check in, dinner, early rest for Rocky Mountain National Park", day: 5, lat: 40.3772, lng: -105.5217 },
-        { id: 15, location: "Bear Lake, Rocky Mountain National Park, CO", name: "Emerald Lake Trail", time: "8:00 AM - 12:00 PM", description: "3.2 miles roundtrip. Passes Nymph, Dream, and Emerald Lakes.", day: 6, lat: 40.3131, lng: -105.6442 },
-        { id: 16, location: "Trail Ridge Road, Rocky Mountain National Park, CO", name: "Trail Ridge Road & Alpine Visitor Center", time: "1:00 PM - 5:00 PM", description: "Highest paved road in US (12,183 ft). Multiple scenic stops.", day: 6, lat: 40.4178, lng: -105.7608 },
-        { id: 17, location: "Estes Park, CO", name: "Depart Estes Park", time: "8:00 AM", description: "Drive to Capulin Volcano National Monument", day: 7, lat: 40.3772, lng: -105.5217 },
-        { id: 18, location: "Capulin Volcano National Monument, NM", name: "Capulin Volcano National Monument", time: "12:00 PM - 2:30 PM", description: "$7 entrance fee. 2-mile spiral drive to rim, crater rim trail.", day: 7, lat: 36.7828, lng: -103.9711 },
-        { id: 19, location: "Plano, TX", name: "Arrive home in Plano, TX", time: "8:00 PM", description: "End of amazing 7-day Colorado adventure!", day: 7, lat: 33.0198, lng: -96.6989 }
+        { id: 3, location: "Pikes Peak, Colorado Springs, CO", name: "Pikes Peak", time: "7:00 AM - 12:00 PM", description: "14,115 ft summit. Drive or Cog Railway. Famous summit donuts!", day: 2, lat: 38.8405, lng: -105.0442 },
+        { id: 4, location: "Garden of the Gods, Colorado Springs, CO", name: "Garden of the Gods", time: "12:30 PM - 4:00 PM", description: "FREE admission. Red rock formations, visitor center, multiple trails.", day: 2, lat: 38.8719, lng: -104.8856 },
+        { id: 5, location: "Breckenridge, CO", name: "Arrive in Breckenridge", time: "6:30 PM", description: "Check in, dinner, early rest for Mount Quandary hike", day: 2, lat: 39.4817, lng: -106.0384 },
+        { id: 6, location: "Breckenridge, CO", name: "Early Preparation", time: "6:00 AM", description: "Breakfast, pack water, snacks, layers, rain gear", day: 3, lat: 39.4817, lng: -106.0384 },
+        { id: 7, location: "Mount Quandary Trailhead, Breckenridge, CO", name: "Mount Quandary Fourteener Hike", time: "7:30 AM - 4:00 PM", description: "6.75 miles roundtrip, 3,365 ft elevation gain. One of Colorado's easier 14ers!", day: 3, lat: 39.3975, lng: -106.1064 },
+        { id: 8, location: "Breckenridge, CO", name: "Celebration Dinner", time: "Evening", description: "Rest and recovery after conquering your first fourteener!", day: 3, lat: 39.4817, lng: -106.0384 },
+        { id: 9, location: "Breckenridge, CO", name: "Depart Breckenridge", time: "8:00 AM", description: "Drive to Arkansas River for kayaking adventure", day: 4, lat: 39.4817, lng: -106.0384 },
+        { id: 10, location: "Arkansas River, Buena Vista, CO", name: "Whitewater Kayaking/Rafting", time: "10:00 AM - 3:00 PM", description: "Class II-III rapids, guided trip with lunch included", day: 4, lat: 38.8422, lng: -106.1311 },
+        { id: 11, location: "Estes Park, CO", name: "Arrive in Estes Park", time: "6:00 PM", description: "Check in, dinner, early rest for Rocky Mountain National Park", day: 4, lat: 40.3772, lng: -105.5217 },
+        { id: 12, location: "Bear Lake, Rocky Mountain National Park, CO", name: "Emerald Lake Trail", time: "8:00 AM - 12:00 PM", description: "3.2 miles roundtrip. Passes Nymph, Dream, and Emerald Lakes.", day: 5, lat: 40.3131, lng: -105.6442 },
+        { id: 13, location: "Trail Ridge Road, Rocky Mountain National Park, CO", name: "Trail Ridge Road & Alpine Visitor Center", time: "1:00 PM - 5:00 PM", description: "Highest paved road in US (12,183 ft). Multiple scenic stops.", day: 5, lat: 40.4178, lng: -105.7608 },
+        { id: 14, location: "Estes Park, CO", name: "Depart Estes Park", time: "8:00 AM", description: "Drive to Capulin Volcano National Monument", day: 6, lat: 40.3772, lng: -105.5217 },
+        { id: 15, location: "Capulin Volcano National Monument, NM", name: "Capulin Volcano National Monument", time: "12:00 PM - 2:30 PM", description: "$7 entrance fee. 2-mile spiral drive to rim, crater rim trail.", day: 6, lat: 36.7828, lng: -103.9711 },
+        { id: 16, location: "Plano, TX", name: "Arrive home in Plano, TX", time: "8:00 PM", description: "End of amazing 6-day Colorado adventure!", day: 6, lat: 33.0198, lng: -96.6989 }
     ]
 };
 
@@ -330,7 +327,7 @@ function updateItineraryDisplay() {
     });
 
     // Update each day panel
-    for (let day = 1; day <= 7; day++) {
+    for (let day = 1; day <= 6; day++) {
         const dayPanel = document.getElementById(`day-${day}`);
         const stopsContainer = dayPanel.querySelector('.stops');
         
